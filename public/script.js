@@ -36,7 +36,7 @@ function OrdenarClassificacoes(classificacao) {
 
 /**
  * Busca informações detalhadas de todos os times
- * Retorna um array com dados como nome, brasão, URI etc.
+ * Retorna um array com dados como nome, brasão, etc.
  */
 async function PegarTimes() {
   const informacoes = await fetchData();
