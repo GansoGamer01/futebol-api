@@ -21,7 +21,7 @@ body {
 }
 
 .header {
-  background: #1a1a1a;
+  background: #333333;
   color: white;
   padding: 20px;
   text-align: center;
@@ -130,6 +130,49 @@ tr:hover {
   font-weight: 600;
 }
 
+tfoot {
+  background-color: #f8f9fa;
+  border-top: 2px solid #eee;
+}
+
+tfoot td {
+  padding: 20px;
+}
+
+.legenda {
+  width: 100%;
+}
+
+.legenda h3 {
+  color: #666;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.legenda-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.legenda-item {
+  color: #333;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.legenda-item::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: #1a1a1a;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
 /* Cores para posições específicas */
 .libertadores {
   background-color: #e8f5e9;
@@ -172,5 +215,24 @@ tr:hover {
     width: 20px;
     height: 20px;
     font-size: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  tfoot td {
+    padding: 15px;
+  }
+
+  .legenda h3 {
+    font-size: 12px;
+  }
+
+  .legenda-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .legenda-item {
+    font-size: 12px;
   }
 }
